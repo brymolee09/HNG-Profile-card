@@ -1,0 +1,328 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+.profile-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Avatar section */
+.profile-card figure {
+  margin: 0;
+}
+
+.profile-card img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Text and bio */
+.profile-card header h2 {
+  margin: 10px 0 5px;
+  font-size: 1.4rem;
+}
+
+.profile-card p {
+  margin: 0;
+  line-height: 1.5;
+  text-align: center;
+  max-width: 600px;
+}
+
+/* Social links */
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 10px 0;
+}
+
+a {
+  text-decoration: none;
+  color: #0077b6;
+  font-weight: 500;
+}
+
+a:focus {
+  outline: 2px solid #0077b6;
+}
+
+/* Hobbies & Dislikes section */
+.profile-card section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.profile-card section h3 {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.profile-card section ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+/* ----- Responsive Layouts ----- */
+
+/* Tablet & Desktop (horizontal layout) */
+@media (min-width: 768px) {
+  .profile-card {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .profile-card figure {
+    flex: 0 0 150px;
+  }
+
+  .profile-card img {
+    margin-bottom: 0;
+  }
+
+  .profile-card header,
+  .profile-card p,
+  nav,
+  .profile-card section {
+    flex: 1;
+  }
+
+  .profile-card p {
+    text-align: left;
+  }
+
+  .profile-card section {
+    justify-content: flex-start;
+  }
+}
+main {
+  max-width: 800px;       /* limits how wide your text stretches */
+  margin: 0 auto;          /* centers everything horizontally */
+  padding: 20px;           /* adds breathing space inside the main area */
+  background-color: #fff;  /* optional: keeps the card look */
+  border-radius: 10px;     /* optional: matches your card’s round corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* optional subtle shadow */
+}
+@media (max-width: 768px) {
+  main {
+    padding: 15px;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 10px;
+    max-width: 95%;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+}
+/* ===== RESET & GLOBAL STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== LAYOUT CONTAINER ===== */
+main {
+  max-width: 900px;
+  width: 90%;
+  background: #fff;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== HEADINGS ===== */
+h1, h2, h3 {
+  color: #222;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-top: 25px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+}
+
+/* ===== PARAGRAPHS & TEXT ===== */
+p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+/* ===== FORM STYLES ===== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.2s ease;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #0077ff;
+  box-shadow: 0 0 0 3px rgba(0, 119, 255, 0.1);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* ===== BUTTON ===== */
+button {
+  background-color: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 18px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #005fcc;
+}
+
+/* ===== MESSAGES ===== */
+.success-message {
+  background-color: #e7f9ed;
+  color: #237a3b;
+  border: 1px solid #bde5c8;
+  padding: 10px 15px;
+  border-radius: 6px;
+}
+
+.error-message {
+  background-color: #fdecea;
+  color: #c0392b;
+  border: 1px solid #f5c6cb;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+/* ===== LINKS & NAV ===== */
+nav {
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav a {
+  text-decoration: none;
+  color: #0077ff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #005fcc;
+}
+
+/* ===== RESPONSIVENESS ===== */
+@media (max-width: 768px) {
+  main {
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 0.95rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  main {
+    width: 95%;
+    padding: 15px;
+  }
+}
